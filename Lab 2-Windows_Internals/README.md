@@ -53,9 +53,20 @@
 
 ### Part 4: Learning Points & Summary
 
-* **Processes:** Act as containers for resources; identified via unique PIDs.
-* **Threads:** The actual units of execution; multiple threads can exist within one process.
-* **Handles:** Abstract pointers used by processes to access system resources like files or keys.
-* **Registry:** A hierarchical database critical for storing system and application-specific settings.
+### 1. Processes
+
+A process is an instance of a running program that provides the resources required to execute the program. It includes a private virtual address space, executable code, and system handles to resources.
+
+### 2. Threads
+
+A thread is the entity within a process that can be scheduled for execution. All threads of a process share its virtual address space and system resources.
+
+### 3. Handles
+
+A handle is an abstract reference (a pointer) to system resources such as files, registry keys, or synchronization objects. Monitoring handles is essential for troubleshooting resource leaks or unauthorized file access.
+
+### 4. Windows Registry
+
+The Registry is a hierarchical database used to store most of the operating system and desktop environment configuration settings. It is organized into "hives," such as `HKEY_LOCAL_MACHINE` (system-wide) and `HKEY_CURRENT_USER` (user-specific).
 
 ---

@@ -29,3 +29,13 @@
 > **Preview: Process Explorer showing the parent-child relationship between cmd.exe and PING.EXE**
 > ![Process Hierarchy](screenshoots/2.png)
 > ![Process Hierarchy](screenshoots/3.png)
+
+* **Execution Units:** Inspected the **Threads** tab of the `conhost.exe` properties to view TIDs and cycle deltas.
+* **Resource Handles:** Enabled the **Lower Pane View** to identify specific files and registry keys accessed by the process.
+
+> **Preview: Side-by-side view of active Threads and Handles for the console host**
+> ![Threads and Handles](screenshoots/4.png)
+
+
+---
+

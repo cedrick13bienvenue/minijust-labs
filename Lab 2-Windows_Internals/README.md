@@ -20,3 +20,12 @@
 
 ---
 
+### Part 2: Process and Thread Analysis
+
+* **Tool Deployment:** Downloaded and extracted the Sysinternals Suite; launched `procexp.exe` with Administrator privileges.
+* **Hierarchy Identification:** Utilized the "Find Window" tool to map the relationship between `explorer.exe`, `cmd.exe`, and `conhost.exe`.
+* **Dynamic Monitoring:** Observed the creation of `PING.EXE` as a child process when executing a network command in the terminal.
+
+> **Preview: Process Explorer showing the parent-child relationship between cmd.exe and PING.EXE**
+> ![Process Hierarchy](screenshoots/2.png)
+> ![Process Hierarchy](screenshoots/3.png)

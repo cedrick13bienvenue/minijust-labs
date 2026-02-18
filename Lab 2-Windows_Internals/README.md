@@ -50,3 +50,12 @@
 > ![Registry Edit](screenshoots/5.png)
 
 ---
+
+### Part 4: Learning Points & Summary
+
+* **Processes:** Act as containers for resources; identified via unique PIDs.
+* **Threads:** The actual units of execution; multiple threads can exist within one process.
+* **Handles:** Abstract pointers used by processes to access system resources like files or keys.
+* **Registry:** A hierarchical database critical for storing system and application-specific settings.
+
+---

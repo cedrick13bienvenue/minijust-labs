@@ -39,3 +39,14 @@
 
 ---
 
+### Part 3: Windows Registry Modification
+
+* **Registry Navigation:** Opened `regedit.exe` and navigated to the user-specific software path for Sysinternals.
+* **Artifact Modification:** Located the `EulaAccepted` key, which was initially set to **1** (accepted).
+* **Verification:** Changed the value to **0** to test persistence.
+* **Result:** Upon restarting Process Explorer, the EULA prompt reappeared, confirming the application's dependence on the registry for configuration data.
+
+> **Preview: Registry Editor showing the EulaAccepted value modification**
+> ![Registry Edit](screenshoots/5.png)
+
+---

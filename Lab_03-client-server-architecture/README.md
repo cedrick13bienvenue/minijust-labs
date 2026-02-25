@@ -67,3 +67,12 @@ GRANT ALL PRIVILEGES ON *.* TO 'ubuntu'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 ```
+### Phase 3: Client Machine Configuration
+
+We prepare **Server B** to act as the client.
+
+```bash
+sudo apt update
+sudo apt install mysql-client -y
+
+```

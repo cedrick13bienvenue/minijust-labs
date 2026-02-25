@@ -26,3 +26,44 @@ To demonstrate remote communication, we require two distinct virtual environment
 * **AMI:** Ubuntu 24.04 LTS for both.
 
 > **Metadata:** Take note of the **Private IP Address** of your `mysql client`. You will use this to restrict database access for maximum security.
+
+### Phase 2: Database Server Configuration
+
+In this phase, we install the MySQL engine on **Server A** and configure it to accept requests from our client.
+
+#### 2.1 Installation
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install mysql-server -y
+sudo systemctl status mysql
+
+```
+
+#### 2.2 Security Group Configuration (Port 3306)
+
+MySQL listens on **TCP Port 3306** by default. We must "open the door" in the AWS Security Group.
+
+* **Source:** Enter the **Private IP of the `mysql client**` (e.g., `172.31.x.x/32`). This ensures only our specific client can attempt a connection.
+
+#### 2.3 Enabling Remote Access (bind-address)
+
+Modify the configuration to listen on all network interfaces:
+
+```bash
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+# Change bind-address to 0.0.0.0
+sudo systemctl restart mysql
+
+```
+
+#### 2.4 Administrative User Configuration
+
+MySQL blocks remote access for the default root user for security. We must create a user authorized for remote connections.
+
+```sql
+CREATE USER 'ubuntu'@'%' IDENTIFIED BY 'your_password_here';
+GRANT ALL PRIVILEGES ON *.* TO 'ubuntu'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+```

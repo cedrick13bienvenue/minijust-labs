@@ -76,3 +76,35 @@ sudo apt update
 sudo apt install mysql-client -y
 
 ```
+
+> **Note:** The client machine does not need the full `mysql-server` package, only the `mysql-client` tool to communicate with the remote engine.
+
+---
+
+## Phase 4: Establishing Remote Connectivity
+
+In this final phase, we use the client utility on **Server B** to log into the database engine on **Server A**.
+
+### 4.1 Remote Login
+
+* **Run the connection command:** Replace `<DB_Server_Private_IP>` with the actual private IP of Server A.
+
+```bash
+mysql -u root -p -h <DB_Server_Private_IP>
+
+```
+
+### 4.2 Database Validation
+
+Once connected, verify that you can query the remote system.
+
+* **Run diagnostic query:**
+
+```sql
+SHOW DATABASES;
+
+```
+
+> **Expected Output:** You should see a table listing the default system databases.
+> ![Database Validation](screenshoots/3.png)
+---

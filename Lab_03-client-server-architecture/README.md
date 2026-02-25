@@ -10,3 +10,9 @@ Through this study and practical lab, I have explored the fundamental relationsh
 * **Decoupling Services:** By separating the database client from the server, I realized how modern applications scale. One database server can serve multiple client instances, improving resource efficiency.
 
 ---
+
+## 2. Practical Implementation: MySQL Remote Connectivity Lab
+
+### Project Overview
+
+This project demonstrates the implementation of a **Client-Server Architecture** using two remote AWS EC2 instances. One instance is configured as a dedicated **Database Server** running MySQL, and the other acts as a **Database Client**. This setup provides hands-on experience with remote database connectivity, networking security, and firewall configuration.
